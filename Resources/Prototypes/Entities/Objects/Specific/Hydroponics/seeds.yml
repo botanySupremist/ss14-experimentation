@@ -571,3 +571,14 @@
       seedId: cotton
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/cotton.rsi
+
+- type: entity
+  parent: SeedBase
+  id: CatSeeds
+  name: packet of synth cat pods
+  description: "Once taboo, but now more than welcome for botanists having a stressful shift."
+  components:
+    - type: Seed
+      seedId: synthcat
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/synth_cat.rsi

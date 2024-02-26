@@ -2575,7 +2575,7 @@
     attributes:
       gender: epicene
 
-- type: entity
+- type: entity #test
   name: cat
   parent: SimpleMobBase
   id: MobCat
@@ -2719,6 +2719,66 @@
       path: /Audio/Animals/cat_meow.ogg
   - type: Respirator #It just works?
     minSaturation: 5.0
+
+- type: entity
+  name: synth cat
+  id: MobCatSynth
+  parent: MobCat # todo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!: make a PlantMob entity that future living plant mobs can inherit from to stop this from being so long. [ MobCat, MobSentientPlant? ]
+  description: A pioneering success of genesplicing, now in a station near you! Or on you.
+  components:
+  - type: Sprite
+    # fill this in
+
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: synthcat
+      Dead:
+        Base: synthcat_dead
+  - type: InteractionPopup
+    successChance: 0.9
+    interactSuccessString: petting-success-synth-cat
+    interactFailureString: petting-failure-synth-cat
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/cat_meow.ogg
+  - type: GhostRole
+    prob: 1 # Shouldn't be a problem, as synth cats should not be able to multiply past the initial seed and showing up via other methods is rare
+    name: ghost-role-information-synthcat-name
+    description: ghost-role-information-synthcat-description
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 2
+        Poison: 1 # Not as hard as true cat claws, but a bit poisonous. Would like to make them inject a reagent that you could swab onto the cat someday
+  - type: PassiveDamage # Slow plant recovery, probably unnecessary but quite fitting
+    allowedStates:
+    - Alive
+    damageCap: 70
+    damage:
+      types:
+        Poison: -0.005
+        Bloodloss: -0.001
+      groups:
+        Brute: -0.03
+        Burn: -0.005
+  - type: Bloodstream
+    bloodMaxVolume: 100
+    bloodReagent: Water
+  - type: Butcherable # :(
+    butcheringType: Spike
+    spawned:
+      - id: FoodMeatPlant
+        amount: 3
+  - type: Thirst
+    thresholds:
+      OverHydrated: 200
+      Okay: 150
+      Thirsty: 100
+      Parched: 50
+      Dead: 0
+      baseDecayRate: 0.06 # plants r thirsty
+
 
 - type: entity
   name: caracal cat
@@ -3186,4 +3246,3 @@
   components:
   - type: ReplacementAccent
     accent: nymph
-    

@@ -1,6 +1,7 @@
 # Nouns
 seeds-noun-seeds = seeds
 seeds-noun-spores = spores
+seeds-noun-pods = pods
 
 # Seeds
 seeds-wheat-name = wheat
@@ -111,3 +112,5 @@ seeds-pumpkin-name = pumpkin
 seeds-pumpkin-display-name = pumpkins
 seeds-cotton-name = cotton
 seeds-cotton-display-name = cotton plant
+seeds-synth-cat-name = synth cat
+seeds-synth-cat-display-name = synth kit

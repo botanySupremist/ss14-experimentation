@@ -1504,3 +1504,24 @@
       Max: 10
       PotencyDivisor: 20
 
+- type: seed
+  id: synthcat
+  name: seeds-synth-cat-name
+  noun: seeds-noun-pods
+  displayName: seeds-synth-cat-display-name
+  plantRsi: Objects/Specific/Hydroponics/synth_cat.rsi
+  packetPrototype: CatSeeds
+  #productPrototypes:
+  lifespan: 40
+  maturation: 10
+  production: 3
+  yield: 1
+  potency: 10
+  growthStages: 3
+  waterConsumption: 1.80
+  nutrientConsumption: 1.20 #complicated structure requires a lot to sustain
+
+
+
+
+

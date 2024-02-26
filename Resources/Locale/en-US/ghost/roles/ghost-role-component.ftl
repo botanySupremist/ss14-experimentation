@@ -201,6 +201,10 @@ ghost-role-information-SyndiCat-name = SyndiCat
 ghost-role-information-SyndiCat-description = You're the faithful trained pet of nuclear operatives with a microbomb. Serve your master to the death!
 ghost-role-information-SyndiCat-rules = You're the faithful trained pet of nuclear operatives with a microbomb. Serve your master to the death!
 
+ghost-role-information-synthcat-name = Synth Cat
+ghost-role-information-synthcat-description = You're a synthetic, planty feline creature, fiercely loyal to those that grew you. Protect them or reign as the supreme ruler of the Botany department.
+ghost-role-information-synthcat-rules = Normal rules apply. You're a synthetic, planty feline creature, fiercely loyal to those that grew you. Don't harm botanists unless they harm you. Do cat things.
+
 ghost-role-information-Cak-name = Cak
 ghost-role-information-Cak-description = You are the chef's favorite child. You're a living cake cat.
 ghost-role-information-Cak-rules = You are a living edible sweet cat. Your task is to find your place in this world where everything wants to eat you.

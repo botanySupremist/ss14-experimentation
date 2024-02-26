@@ -20,6 +20,8 @@
         amount: 2
       - id: BungoSeeds
         amount: 2
+      - id: CatSeeds
+        amount: 1 # 2 could lead to problems. ideally put in living plant crate in future if such should exist
 
 - type: entity
   id: CrateHydroponicsSeedsMedicinal
