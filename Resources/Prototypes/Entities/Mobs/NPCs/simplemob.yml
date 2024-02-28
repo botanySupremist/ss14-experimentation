@@ -133,7 +133,12 @@
         Burn: -0.005
    - type: Bloodstream
      bloodMaxVolume: 80 # chunky
-     bloodReagent: Water 
+     bloodReagent: Water
+   - type: Butcherable # :(
+     butcheringType: Knife
+     spawned:
+      - id: FoodMeatPlant
+        amount: 3
    - type: Reactive # copied over from diona from here and below
      groups:
       Flammable: [ Touch ]

@@ -2776,11 +2776,6 @@
   - type: Bloodstream
     bloodMaxVolume: 100
     bloodReagent: Water
-  - type: Butcherable # :(
-    butcheringType: Knife
-    spawned:
-      - id: FoodMeatPlant
-        amount: 3
 
 - type: entity
   name: caracal cat
