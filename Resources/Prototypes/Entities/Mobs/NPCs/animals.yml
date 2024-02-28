@@ -2777,7 +2777,7 @@
     bloodMaxVolume: 100
     bloodReagent: Water
   - type: Butcherable # :(
-    butcheringType: Spike
+    butcheringType: Knife
     spawned:
       - id: FoodMeatPlant
         amount: 3
