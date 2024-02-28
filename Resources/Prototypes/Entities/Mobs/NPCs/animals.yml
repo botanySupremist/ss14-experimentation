@@ -2724,22 +2724,36 @@
   name: synth cat
   id: MobCatSynth
   parent: [MobCat, MobSentientPlantBase]
-  description: A pioneering success of genesplicing, now in a station near you! Or on you.
+  description: A pioneering success of genesplicing. While it's rubbery and never seems to stop watching you, it is a cat and thus appreciable regardless.
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Animals/synthcat.rsi
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: synthcat
+      sprite: Mobs/Animals/synthcat.rsi
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: synthcat-moving # as of Feb 27 2024 there is a bug preventing this from working for AI-controlled animals
+    noMovementLayers:
+      movement:
+        state: synthcat
   - type: DamageStateVisuals
     states:
       Alive:
         Base: synthcat
+      Critical:
+        Base: synthcat_dead
       Dead:
         Base: synthcat_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      75: Critical
+      150: Dead
   - type: InteractionPopup
-    successChance: 0.9
+    successChance: 0.7
     interactSuccessString: petting-success-synth-cat
     interactFailureString: petting-failure-synth-cat
     interactSuccessSpawn: EffectHearts
@@ -2752,12 +2766,12 @@
     allowMovement: true
     name: ghost-role-information-synthcat-name
     description: ghost-role-information-synthcat-description
-    rules: ghost-role-information-synthcat-rules # probably unnecessary
+    rules: ghost-role-information-synthcat-rules
   - type: GhostTakeoverAvailable
   - type: MeleeWeapon
     damage:
       types:
-        Piercing: 2
+        Piercing: 3
         Poison: 1 # Not as hard as true cat claws, but a bit poisonous. Would like to make them inject a reagent that you could swab onto the cat someday
   - type: Bloodstream
     bloodMaxVolume: 100

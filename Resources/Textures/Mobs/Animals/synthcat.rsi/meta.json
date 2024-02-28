@@ -8,11 +8,49 @@
   "copyright": "from https://github.com/goonstation/goonstation/blob/master/icons/obj/hydroponics/plants_alien.dmi, created and later remastered by Flaborized https://forum.ss13.co/showthread.php?tid=13298&pid=141929#pid141929",
   "states": [
     {
-        "name": "synthcat",
-        "directions": 4
+      "name": "synthcat",
+      "directions": 4
     },
     {
-        "name": "synthcat_dead"
+      "name": "synthcat-moving",
+      "directions": 4,
+        "delays": [
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ]
+        ]
+    },
+    {
+      "name": "synthcat_dead"
     }
   ]
 }
