@@ -21,7 +21,7 @@
       - id: BungoSeeds
         amount: 2
       - id: CatSeeds
-        amount: 1 # 2 could lead to problems. ideally put in living plant crate in future if such should exist
+        amount: 2 # reduce to 1 if plant cat uprising becomes a regular occurence
 
 - type: entity
   id: CrateHydroponicsSeedsMedicinal

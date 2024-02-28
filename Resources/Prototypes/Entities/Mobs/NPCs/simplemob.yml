@@ -104,3 +104,65 @@
   - type: MobPrice
     price: 150
   - type: FloatingVisuals
+
+- type: entity
+  parent:
+  - SimpleMobBase
+  id: MobSentientPlantBase
+  suffix: AI
+  abstract: true
+  components:
+   - type: Thirst
+     thresholds:
+      OverHydrated: 200
+      Okay: 150
+      Thirsty: 100
+      Parched: 50
+      Dead: 0
+     baseDecayRate: 0.06 # plants are thirsty
+   - type: PassiveDamage # Slow plant recovery, probably unnecessary but quite fitting
+     allowedStates:
+       - Alive
+     damageCap: 70
+     damage:
+      types:
+        Poison: -0.005
+        Bloodloss: -0.005
+      groups:
+        Brute: -0.02
+        Burn: -0.005
+   - type: Bloodstream
+     bloodMaxVolume: 80 # chunky
+     bloodReagent: Water 
+   - type: Reactive # copied over from diona from here and below
+     groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+      Acidic: [Touch, Ingestion] # down from here is disabled for the time being because the game has no flippity-fuck-idea how to search for PlantBGone and freaks the hell out
+ #  - reactions:
+ #  - reagents: [ PlantBGone ]
+ #    methods: [ Touch ]
+ #    effects:
+ #     - !type:HealthChange
+ #       scaled: true
+ #       damage:
+ #         types:
+ #           Blunt: 2
+ #           Slash: 2
+ #           Piercing: 3
+ #     - !type:PopupMessage
+ #       type: Local
+ #       visualType: Large
+ #       messages: [ "diona-hurt-by-herbicide-popup" ] # Doesn't refer to diona in particular so shouldn't be a problem
+ #  - reagents: [ WeedKiller ]
+ #    methods: [ Touch ]
+ #    effects:
+ #     - !type:HealthChange
+ #       scaled: true
+ #       damage:
+ #         types:
+ #           Poison: 5
+ #     - !type:PopupMessage
+ #       type: Local
+ #       visualType: Large
+ #       messages: [ "diona-hurt-by-herbicide-popup" ]

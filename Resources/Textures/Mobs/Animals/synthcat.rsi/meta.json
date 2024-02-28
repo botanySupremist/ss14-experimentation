@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "from https://github.com/goonstation/goonstation/blob/master/icons/obj/hydroponics/plants_alien.dmi, created and later remastered by Flaborized https://forum.ss13.co/showthread.php?tid=13298&pid=141929#pid141929",
+  "states": [
+    {
+        "name": "synthcat",
+        "directions": 4
+    },
+    {
+        "name": "synthcat_dead"
+    }
+  ]
+}
+
