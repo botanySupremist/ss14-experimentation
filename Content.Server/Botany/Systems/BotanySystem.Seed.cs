@@ -145,8 +145,6 @@ public sealed partial class BotanySystem : EntitySystem
 
     public IEnumerable<EntityUid> GenerateProduct(SeedData proto, EntityCoordinates position, int yieldMod = 1)
     {
-        bool? isSentientPlant = null;
-
         var totalYield = 0;
         if (proto.Yield > -1)
         {
